@@ -69,7 +69,7 @@ with your deployed Google Apps Script URL.
 
 ### 5. Run the Application
 
-Open `Bookmark.html` in your browser.
+Open `index.html` in your browser.
 
 ## 📸 Preview
 
