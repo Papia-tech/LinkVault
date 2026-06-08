@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark Saver</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="Bookmark.css">
+</head>
+<body>
+    <div id="app_loading_screen">
+        <div class="loading_box">
+            <div class="dot_container">
+                <div class="loading_dot"></div>
+                <div class="loading_dot"></div>
+                <div class="loading_dot"></div>
+                <div class="loading_dot"></div>
+            </div>
+            <p class="loading_text">Fetching Cloud Bookmarks</p>
+        </div>
+    </div>
+
+    <div class="add_container" id="add_container">
+        <h1>Bookmark Saver</h1>
+        <div class="input_container" id="input_container">
+            <input type="text" id="bookmark_name" placeholder="Bookmark Name" required>
+            <input type="url" id="bookmark_url" placeholder="e.g., https://google.com" required>
+            <button type="submit" id="add_bookmark">Add Bookmark</button>
+        </div>
+        <hr class="fancy">
+        <div class="list" id="list">
+            <ul id="bookmark_list">
+            </ul>
+        </div>
+    </div>
+
+    <div id="modal_overlay" class="modal_hidden">
+        <div id="modal_box">
+            <div id="modal_icon_wrapper">
+                <span id="modal_icon" class="material-icons-outlined">error_outline</span>
+            </div>
+            <p id="modal_message">Alert message goes here.</p>
+            
+            <div id="modal_edit_inputs" style="display: none; flex-direction: column; gap: 10px; margin-bottom: 20px;">
+                <input type="text" id="edit_bookmark_name" placeholder="Edit Name" style="width: 100%;">
+                <input type="url" id="edit_bookmark_url" placeholder="Edit URL" style="width: 100%;">
+            </div>
+
+            <div id="modal_actions">
+                <button id="modal_cancel_btn">Cancel</button>
+                <button id="modal_confirm_btn">OK</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="Bookmark.js"></script>
+</body>
+</html>
